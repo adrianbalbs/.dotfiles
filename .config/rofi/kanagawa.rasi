@@ -1,28 +1,28 @@
 * {
-  background:                  #1f1f28;
+  background:                  #191724;
   selected-active-foreground:  var(background);
   separatorcolor:              var(foreground);
   urgent-foreground:           var(red);
-  alternate-urgent-background: var(lightbg);
+  alternate-urgent-background: var(bg);
   background-color:            transparent;
   border-color:                var(foreground);
   normal-background:           var(background);
   selected-urgent-background:  var(red);
-  alternate-active-background: var(lightbg);
+  alternate-active-background: var(bg);
   spacing:                     10;
   alternate-normal-foreground: var(foreground);
   urgent-background:           var(background);
-  selected-normal-foreground:  #dcd7ba;
-  active-foreground:           #dcd7ba;
-  selected-active-background:  #2d4f67;
-  active-background:           #2d4f67;
-  selected-normal-background:  #2d4f67;
-  alternate-normal-background: #1f1f28;
-  foreground:                  #dcd7ba;
-  selected-urgent-foreground:  #dcd7ba;
-  normal-foreground:           #dcd7ba;
-  alternate-urgent-foreground: #dcd7ba;
-  alternate-active-foreground: #dcd7ba;
+  selected-normal-foreground:  #e0def4;
+  active-foreground:           #e0def4;
+  selected-active-background:  #31748f;
+  active-background:           #31748f;
+  selected-normal-background:  #31748f;
+  alternate-normal-background: #191724;
+  foreground:                  #e0def4;
+  selected-urgent-foreground:  #e0def4;
+  normal-foreground:           #e0def4;
+  alternate-urgent-foreground: #e0def4;
+  alternate-active-foreground: #e0def4;
 }
 element {
     padding: 10px 10px 10px 25px ;
@@ -30,31 +30,31 @@ element {
     border:  0;
 }
 element normal.normal {
-    background-color: #1f1f28;
-    text-color:       #dcd7ba;
+    background-color: #191724;
+    text-color:       #e0def4;
 }
 element selected.normal {
     background-color: var(selected-normal-background);
-    text-color:       #dcd7ba;
+    text-color:       #e0def4;
 }
 element alternate.normal {
-    background-color: #1f1f28;
-    text-color:       #dcd7ba;
+    background-color: #191724;
+    text-color:       #e0def4;
 }
 element-text {
-    highlight:        #7e9cd8;
-    text-color:       #dcd7ba;
+    highlight:        #9ccfd8;
+    text-color:       #e0def4;
 }
 window {
-    background-color:   #16161d;
+    background-color:   #1f1d2e;
     border:             2;
-    border-color:       #7e9cd8;
+    border-color:       #9ccfd8;
     border-radius:      15;
     width: 600px;
 }
 mainbox {
     border:  0;
-    background-color: #16161d;
+    background-color: #1f1d2e;
 }
 message {
     padding:      1px ;
@@ -62,12 +62,12 @@ message {
     border:       2px dash 0px 0px ;
 }
 textbox {
-    background-color: #1f1f28;
-    text-color: #dcd7ba;
+    background-color: #191724;
+    text-color: #e0def4;
 }
 listview {
     scrollbar:    false;
-    background-color: #1f1f28;
+    background-color: #191724;
     border-radius: 15px;
     fixed-height: 0;
     border:       0;
@@ -85,8 +85,8 @@ textbox-num-sep {
 inputbar {
     padding:    20px 20px 10px 25px ;
     spacing:    0px ;
-    text-color: #dcd7ba;
-    background-color: #16161d;
+    text-color: #e0def4;
+    background-color: #1f1d2e;
 }
 case-indicator {
     spacing:    0;
@@ -94,11 +94,11 @@ case-indicator {
     enabled: false;
 }
 entry {
-    text-color:        #dcd7ba;
+    text-color:        #e0def4;
     cursor:            text;
     spacing:           0;
-    placeholder-color: #727169;
-    placeholder:       " Search";
+    placeholder-color: #6e6a86;
+    placeholder:       "Search";
 }
 prompt {
     enabled: false;
