@@ -35,7 +35,7 @@ return {
                     map("n", "gs", vim.lsp.buf.signature_help, "Show signature help")
 
                     -- References and Actions
-                    map("n", "gr", fzf.lsp_references, "Find references")
+                    map("n", "gr", vim.lsp.buf.references, "Find references")
                     map("n", "<leader>cr", vim.lsp.buf.rename, "Rename symbol")
                     map("n", "<leader>ca", function()
                         fzf.lsp_code_actions { previewer = false }
