@@ -22,8 +22,8 @@ source ~/.zshrc
 
 You can then sync this repository by using `dotfiles` instead of `git`. For example:
 ```bash
-dotfiles add ~/.zshrc
-dotfiles add ~/.config/nvim
+dotfiles add -f ~/.zshrc
+dotfiles add -f ~/.config/nvim
 dotfiles commit -m "<MESSAGE>"
 dotfiles push
 
