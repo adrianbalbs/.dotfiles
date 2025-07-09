@@ -8,11 +8,14 @@ are tracked inside of the system's `$HOME` directory, rather than using symlinks
 Git clone this repository
 
 ```bash
-git clone --bare git@github.com:adrianbalbs/.dotfiles.git
+git clone --bare git@github.com:adrianbalbs/.dotfiles.git $HOME/.dotfiles
 ```
 
 Then run
 ```bash
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotfiles checkout
 source ~/.zshrc
 
 ```
