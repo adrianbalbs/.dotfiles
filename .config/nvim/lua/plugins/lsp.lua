@@ -37,9 +37,7 @@ return {
                     -- References and Actions
                     map("n", "gr", vim.lsp.buf.references, "Find references")
                     map("n", "<leader>cr", vim.lsp.buf.rename, "Rename symbol")
-                    map("n", "<leader>ca", function()
-                        fzf.lsp_code_actions { previewer = false }
-                    end, "Show code actions")
+                    map("n", "<leader>ca", vim.lsp.buf.code_action, "Show code actions")
                     map("n", "<leader>fs", function()
                         fzf.lsp_document_symbols { previewer = false }
                     end, "Find LSP Symbols")
