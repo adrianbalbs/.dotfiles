@@ -93,4 +93,3 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 eval "$(starship init zsh)"
 
-. "$HOME/.local/bin/env"
