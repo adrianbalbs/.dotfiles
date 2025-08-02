@@ -5,11 +5,9 @@ return {
         lazy = false,
         priority = 1000, -- make sure to load this before all the other start plugins
         -- Optional; default configuration will be used if setup isn't called.
-        config = function()
-            require("everforest").setup {
-                -- Your config here
-            }
-        end,
+        -- config = function()
+        --     require("everforest").setup {}
+        -- end,
     },
     {
         "kepano/flexoki-neovim",
@@ -32,6 +30,12 @@ return {
         },
     },
     {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = { transparent = true },
+    },
+    {
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
@@ -42,8 +46,5 @@ return {
             },
             transparent_background = true,
         },
-        -- init = function()
-        --     vim.cmd "colorscheme catppuccin"
-        -- end,
     },
 }
