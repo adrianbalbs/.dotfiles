@@ -42,5 +42,6 @@ return {
                 c = gen_spec.treesitter { a = "@class.outer", i = "@class.inner" },
             },
         }
+        require("mini.sessions").setup {}
     end,
 }
