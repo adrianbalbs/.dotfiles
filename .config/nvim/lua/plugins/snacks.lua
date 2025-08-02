@@ -8,14 +8,73 @@ return {
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
         bigfile = { enabled = true },
-        dashboard = { enabled = true },
+        dashboard = {
+            preset = {
+                pick = nil,
+                ---@type snacks.dashboard.Item[]
+                keys = {
+                    { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+                    { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+                    {
+                        icon = " ",
+                        key = "g",
+                        desc = "Find Text",
+                        action = ":lua Snacks.dashboard.pick('live_grep')",
+                    },
+                    {
+                        icon = " ",
+                        key = "r",
+                        desc = "Recent Files",
+                        action = ":lua Snacks.dashboard.pick('oldfiles')",
+                    },
+                    {
+                        icon = " ",
+                        key = "c",
+                        desc = "Config",
+                        action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+                    },
+                    { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+                    {
+                        icon = "󰒲 ",
+                        key = "l",
+                        desc = "Lazy",
+                        action = ":Lazy",
+                        enabled = package.loaded.lazy ~= nil,
+                    },
+                    { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+                },
+                header = [[
+                                                                             
+               ████ ██████           █████      ██                     
+              ███████████             █████                             
+              █████████ ███████████████████ ███   ███████████   
+             █████████  ███    █████████████ █████ ██████████████   
+            █████████ ██████████ █████████ █████ █████ ████ █████   
+          ███████████ ███    ███ █████████ █████ █████ ████ █████  
+         ██████  █████████████████████ ████ █████ █████ ████ ██████ 
+      ]],
+            },
+            sections = {
+                { section = "header" },
+                {
+                    section = "keys",
+                    indent = 1,
+                    padding = 1,
+                },
+                { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
+                { section = "startup" },
+            },
+        },
         indent = { enabled = false },
+        rename = { enabled = true },
         input = { enabled = true },
         notifier = { enabled = true },
         quickfile = { enabled = true },
         scroll = { enabled = false },
+        scratch = { enabled = false },
+        scope = { enabled = false },
         statuscolumn = { enabled = true },
-        words = { enabled = true },
+        words = { enabled = false },
     },
     keys = {
         {
@@ -32,20 +91,20 @@ return {
             end,
             desc = "Toggle Zoom",
         },
-        {
-            "<leader>.",
-            function()
-                Snacks.scratch()
-            end,
-            desc = "Toggle Scratch Buffer",
-        },
-        {
-            "<leader>S",
-            function()
-                Snacks.scratch.select()
-            end,
-            desc = "Select Scratch Buffer",
-        },
+        -- {
+        --     "<leader>.",
+        --     function()
+        --         Snacks.scratch()
+        --     end,
+        --     desc = "Toggle Scratch Buffer",
+        -- },
+        -- {
+        --     "<leader>S",
+        --     function()
+        --         Snacks.scratch.select()
+        --     end,
+        --     desc = "Select Scratch Buffer",
+        -- },
         {
             "<leader>n",
             function()
@@ -61,27 +120,43 @@ return {
             desc = "Delete Buffer",
         },
         {
+            "<leader>ba",
+            function()
+                Snacks.bufdelete.all()
+            end,
+            desc = "Buffer delete all",
+            mode = "n",
+        },
+        {
+            "<leader>bo",
+            function()
+                Snacks.bufdelete.other()
+            end,
+            desc = "Buffer delete other",
+            mode = "n",
+        },
+        {
             "<leader>cR",
             function()
                 Snacks.rename.rename_file()
             end,
             desc = "Rename File",
         },
-        {
-            "<leader>gB",
-            function()
-                Snacks.gitbrowse()
-            end,
-            desc = "Git Browse",
-            mode = { "n", "v" },
-        },
-        {
-            "<leader>gb",
-            function()
-                Snacks.git.blame_line()
-            end,
-            desc = "Git Blame Line",
-        },
+        -- {
+        --     "<leader>gB",
+        --     function()
+        --         Snacks.gitbrowse()
+        --     end,
+        --     desc = "Git Browse",
+        --     mode = { "n", "v" },
+        -- },
+        -- {
+        --     "<leader>gb",
+        --     function()
+        --         Snacks.git.blame_line()
+        --     end,
+        --     desc = "Git Blame Line",
+        -- },
         -- { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
         -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
         -- { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)" },
@@ -94,22 +169,22 @@ return {
         },
         -- { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
         -- { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
-        {
-            "]]",
-            function()
-                Snacks.words.jump(vim.v.count1)
-            end,
-            desc = "Next Reference",
-            mode = { "n", "t" },
-        },
-        {
-            "[[",
-            function()
-                Snacks.words.jump(-vim.v.count1)
-            end,
-            desc = "Prev Reference",
-            mode = { "n", "t" },
-        },
+        -- {
+        --     "]]",
+        --     function()
+        --         Snacks.words.jump(vim.v.count1)
+        --     end,
+        --     desc = "Next Reference",
+        --     mode = { "n", "t" },
+        -- },
+        -- {
+        --     "[[",
+        --     function()
+        --         Snacks.words.jump(-vim.v.count1)
+        --     end,
+        --     desc = "Prev Reference",
+        --     mode = { "n", "t" },
+        -- },
         {
             "<leader>N",
             desc = "Neovim News",
@@ -130,6 +205,14 @@ return {
         },
     },
     init = function()
+        vim.api.nvim_create_autocmd("User", {
+            pattern = "OilActionsPost",
+            callback = function(event)
+                if event.data.actions.type == "move" then
+                    Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url)
+                end
+            end,
+        })
         vim.api.nvim_create_autocmd("User", {
             pattern = "VeryLazy",
             callback = function()
