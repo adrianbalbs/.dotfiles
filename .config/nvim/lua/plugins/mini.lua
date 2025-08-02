@@ -2,7 +2,7 @@ return {
     "echasnovski/mini.nvim",
     version = false,
     config = function()
-        require("mini.diff").setup()
+        require("mini.diff").setup {}
         require("mini.surround").setup {
 
             add = "sa", -- Add surrounding in Normal and Visual modes
@@ -27,6 +27,19 @@ return {
 
                 -- Highlight hex color strings (`#rrggbb`) using that color
                 hex_color = hipatterns.gen_highlighter.hex_color(),
+            },
+        }
+
+        local gen_spec = require("mini.ai").gen_spec
+        require("mini.ai").setup {
+            n_lines = 500,
+            custom_textobjects = {
+                o = gen_spec.treesitter { -- code block
+                    a = { "@block.outer", "@conditional.outer", "@loop.outer" },
+                    i = { "@block.inner", "@conditional.inner", "@loop.inner" },
+                },
+                f = gen_spec.treesitter { a = "@function.outer", i = "@function.inner" }, -- function
+                c = gen_spec.treesitter { a = "@class.outer", i = "@class.inner" },
             },
         }
     end,
