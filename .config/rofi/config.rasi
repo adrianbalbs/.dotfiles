@@ -1,8 +1,27 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Configuration -----*****/
 configuration {
-  modes: "drun";
-  font: "FiraCode Nerd Font 12";
-  fixed-num-lines: true;
-  drun-match-fields: "name,generic,exec,categories,keywords";
-  drun-display-format: "{name} [<span foreground='#dcd7ba'><i>({generic})</i></span>]";
+  modi               : "run,drun,window";
+  disable-history    : false;
+  display-run        : " ";
+  display-drun       : " ";
+  display-window     : "󰕰 ";
+  display-clipboard  : " ";
+  drun-display-format: "{icon} {name}";
+  clipboard-display-format: "{name}";
+  hide-scrollbar     : true;
+  location           : 0;
+  show-icons         : true;
+  sidebar-mode       : true;
+  terminal           : "wezterm";
 }
-@theme "kanagawa"
+
+@theme "theme.rasi"
