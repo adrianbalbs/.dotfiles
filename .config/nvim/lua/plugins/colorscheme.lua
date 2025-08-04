@@ -33,7 +33,7 @@ return {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
-        opts = { transparent = true },
+        opts = { transparent = false, style = "moon" },
     },
     {
         "catppuccin/nvim",
