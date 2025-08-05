@@ -397,7 +397,7 @@
   "theme.bar.buttons.radius": "1em",
   "theme.bar.buttons.padding_x": "0.7rem",
   "bar.layouts": {
-    "0": {
+    "2": {
       "left": [
         "dashboard",
         "workspaces",
@@ -412,7 +412,22 @@
         "notifications"
       ]
     },
-    "1": {
+    "DP-1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "DP-2": {
       "left": [
         "dashboard",
         "workspaces",
@@ -431,21 +446,6 @@
         "network",
         "bluetooth",
         "power"
-      ]
-    },
-    "2": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "clock",
-        "notifications"
       ]
     }
   },
