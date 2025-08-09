@@ -75,6 +75,7 @@ return {
                 "clangd",
                 "lua_ls",
                 "vtsls",
+                "eslint",
                 "gopls",
                 "cmake",
                 "basedpyright",
