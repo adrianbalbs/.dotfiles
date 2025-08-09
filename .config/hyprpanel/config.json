@@ -495,8 +495,9 @@
   "bar.customModules.storage.paths": [
     "/"
   ],
-  "theme.font.name": "FiraCode Nerd Font",
-  "theme.font.label": "FiraCode Nerd Font",
+  "theme.font.name": "CaskaydiaMono Nerd Font Mono",
+  "theme.font.label": "CaskaydiaMono Nerd Font Mono",
   "theme.bar.enableShadow": false,
-  "theme.font.style": "normal"
+  "theme.font.style": "normal",
+  "theme.bar.menus.menu.network.scaling": 100
 }
