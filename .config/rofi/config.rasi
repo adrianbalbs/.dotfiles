@@ -1,27 +1,29 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
+configuration{
+    modi: ["drun", "window", "run"];
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
+    terminal: "wezterm";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+    display-drun: " ";
+    display-run: " ";
+    display-window: " ";
+    
+    //adding vim keybindings
+    kb-row-up: "Up,Control+k";
+    kb-row-left: "Left,Control+h";
+    kb-row-right: "Right,Control+l";
+    kb-row-down: "Down,Control+j";
 
-/*****----- Configuration -----*****/
-configuration {
-  modi               : "run,drun,window";
-  disable-history    : false;
-  display-run        : " ";
-  display-drun       : " ";
-  display-window     : "󰕰 ";
-  display-clipboard  : " ";
-  drun-display-format: "{icon} {name}";
-  clipboard-display-format: "{name}";
-  hide-scrollbar     : true;
-  location           : 0;
-  show-icons         : true;
-  sidebar-mode       : true;
-  terminal           : "wezterm";
+    kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
+
+    //fixing up
+    kb-remove-to-eol: "";
+    kb-move-char-back: "Control+b";
+    kb-remove-char-back: "BackSpace";
+    kb-move-char-forward: "Control+f";
+    kb-mode-complete: "Control+o";
 }
-
-@theme "theme.rasi"
+@theme "tokyonight.rasi"
