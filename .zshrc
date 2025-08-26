@@ -96,4 +96,4 @@ GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 eval "$(starship init zsh)"
-
+eval "$(direnv hook zsh)"
