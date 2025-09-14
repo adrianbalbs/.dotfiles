@@ -85,6 +85,7 @@ return {
                 "astro",
                 "marskman",
                 "yamlls",
+                "fish_lsp",
             }
         end,
     },
