@@ -16,6 +16,7 @@ end
 -- For example, changing the color scheme:
 -- config.colors = theme.colors()
 config.color_scheme = "Tokyo Night Moon"
+config.default_prog = { "/usr/bin/fish", "-l" }
 config.send_composed_key_when_left_alt_is_pressed = false
 config.send_composed_key_when_right_alt_is_pressed = true
 config.use_fancy_tab_bar = false
