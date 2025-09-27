@@ -1,6 +1,12 @@
 README.md
 
 # Dotfiles for things like wayland compositors and stuff shouldn't be added on other setups
+
+{{- if eq .chezmoi.hostname "adrianb.work"}}
+*/ghostty/
+*/wezterm/
+{{- end }}
+
 {{- if ne .chezmoi.hostname "adrianb.arch" }}
 */hypr/
 */niri/
