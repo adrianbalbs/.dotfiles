@@ -1,7 +1,7 @@
 {
     "appLauncher": {
         "backgroundOpacity": 1,
-        "enableClipboardHistory": false,
+        "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
         "position": "center",
@@ -163,7 +163,7 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
@@ -173,7 +173,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1758925469000,
+        "lastSeenTs": 1758953874000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -212,10 +212,20 @@
     "wallpaper": {
         "directory": "/home/adrianb/.config/walls/",
         "enableMultiMonitorDirectories": false,
-        "enabled": false,
+        "enabled": true,
         "fillColor": "#000000",
         "fillMode": "crop",
         "monitors": [
+            {
+                "directory": "/home/adrianb/.config/walls/",
+                "name": "DP-1",
+                "wallpaper": "/home/adrianb/.config/walls//wallhaven-o5zrj7_2560x1440.png"
+            },
+            {
+                "directory": "/home/adrianb/.config/walls/",
+                "name": "DP-2",
+                "wallpaper": "/home/adrianb/.config/walls//wallhaven-o5zrj7_2560x1440.png"
+            }
         ],
         "randomEnabled": false,
         "randomIntervalSec": 300,
