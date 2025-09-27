@@ -173,7 +173,6 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "enableOSD": true,
         "lastSeenTs": 1758925469000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
@@ -182,6 +181,13 @@
         ],
         "normalUrgencyDuration": 8,
         "respectExpireTimeout": false
+    },
+    "osd": {
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "top_right",
+        "monitors": [
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
