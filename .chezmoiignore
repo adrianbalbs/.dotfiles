@@ -1,0 +1,9 @@
+README.md
+
+# Dotfiles for things like wayland compositors and stuff shouldn't be added on other setups
+{{- if ne .chezmoi.hostname "adrianb.arch" }}
+hypr
+niri
+noctalia
+{{- end }}
+
