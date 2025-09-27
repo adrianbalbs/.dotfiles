@@ -45,10 +45,10 @@ export ZID=z5397730
 export CSE=${ZID}@login.cse.unsw.edu.au
 alias cse="ssh $CSE"
 
-{{- if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" -}}
 # Use gnu coreutils instead of mac coreutils
 export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
-{{- end -}}
+{{- end }}
 
 
 export VOLTA_HOME="$HOME/.volta"
