@@ -1,0 +1,21 @@
+font-family = "FiraCode Nerd Font Mono"
+theme = "TokyoNight Moon"
+mouse-hide-while-typing = true
+window-height = 40
+window-width = 100
+window-padding-x = 10
+
+{{- if eq .chezmoi.hostname "adrianb.arch" }}
+window-decoration = false
+{{- end }}
+
+{{- if eq .chezmoi.os "darwin" }}
+font-size = 18
+command = /opt/homebrew/bin/fish --login --interactive
+macos-option-as-alt = true
+{{ else }}
+font-size = 12
+command = /usr/bin/fish --login --interactive
+{{- end }}
+
+shell-integration = fish
