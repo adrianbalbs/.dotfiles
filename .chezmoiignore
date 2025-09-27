@@ -4,12 +4,12 @@ README.md
 
 {{- if eq .chezmoi.hostname "adrianb.work"}}
 */ghostty/
-*/wezterm/
 {{- end }}
 
 {{- if ne .chezmoi.hostname "adrianb.arch" }}
 */hypr/
 */niri/
 */noctalia/
+*/wezterm/
 {{- end }}
 
