@@ -1,0 +1,27 @@
+packages:
+  common:
+    - "git"
+    - "ripgrep"
+    - "nvim"
+    - "bat"
+    - "coreutils"
+    - "eza"
+    - "direnv"
+    - "fish"
+    - "fzf"
+    - "lazygit"
+    - "zoxide"
+    - "tmux"
+    - "timewarrior"
+    - "starship"
+    - "fd"
+    - "jq"
+  darwin:
+    brews:
+      - "coreutils"
+    casks:
+      - "font-fira-code-nerd-font"
+      - "ghostty"
+      - "github"
+      - "docker-desktop"
+      - "docker"
