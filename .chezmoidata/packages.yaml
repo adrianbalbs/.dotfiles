@@ -1,24 +1,104 @@
 packages:
-  common:
-    - "git"
-    - "ripgrep"
-    - "nvim"
-    - "bat"
-    - "coreutils"
-    - "eza"
-    - "direnv"
-    - "fish"
-    - "fzf"
-    - "lazygit"
-    - "zoxide"
-    - "tmux"
-    - "timewarrior"
-    - "starship"
-    - "fd"
-    - "jq"
+  # this is for work
+  wsl:
+    - git
+    - ripgrep
+    - nvim
+    - bat
+    - eza
+    - direnv
+    - fish
+    - fzf
+    - lazygit
+    - zoxide
+    - tmux
+    - timew
+    - starship
+    - fd
+    - jq
+
+  arch:
+    # system
+    - polkit-gnome
+    - xdg-desktop-portal-gnome
+    - cups
+    - bluez
+    - sbctl
+    - solaar
+    - timeshift
+
+    # ui
+    - brightnessctl
+    - quickshell
+
+    # niri
+    - niri
+    - noctalia-shell
+
+    # cli tools
+    - ripgrep
+    - eza
+    - bat
+    - fzf
+    - fish
+    - zsh
+    - zoxide
+    - timew
+    - starship
+    - fd
+    - jq
+    - tmux
+    - btop
+    - ffmpeg
+
+    # Dev
+    - git
+    - neovim
+    - cursor-bin
+    - direnv
+    - docker
+    - lazygit
+    - lazydocker
+
+    # TODO language tools?
+
+    # apps
+    - zen-browser-bin
+    - brave-bin
+    - ghostty
+    - wezterm-git
+    - discord
+    - obsidian
+    - thunderbird
+
+    # gaming
+    - steam
+    - gpu-screen-recorder
+    - gpu-screen-recorder-gtk
+    - gamemode
+
+    # fonts
+    - ttf-firacode-nerd
+
   darwin:
+    # bit of repetition here but thats fine
     brews:
+      - "git"
+      - "ripgrep"
+      - "nvim"
+      - "bat"
       - "coreutils"
+      - "eza"
+      - "direnv"
+      - "fish"
+      - "fzf"
+      - "lazygit"
+      - "zoxide"
+      - "tmux"
+      - "timewarrior"
+      - "starship"
+      - "fd"
+      - "jq"
     casks:
       - "font-fira-code-nerd-font"
       - "ghostty"

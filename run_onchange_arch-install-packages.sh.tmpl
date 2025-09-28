@@ -1,0 +1,28 @@
+{{ if eq .chezmoi.hostname "adrianb" -}}
+#!/bin/bash
+
+# We'll use paru to install all both official arch repo packages and AUR packages
+if ! command -v paru &>/dev/null; then
+    echo "Paru install not found, installing from pacman"
+
+    sudo pacman -Syu --noconfirm paru
+
+    # check if pacman failed to install paru so we can early exit and not break our script lol
+    if ! sudo pacman -Syu --noconfirm paru; then
+        echo "Error: pacman failed to install paru, exiting"
+        exit 1
+    fi
+else
+    echo "Paru install found"
+fi
+
+echo "Installing packages..."
+
+if ! paru -S --noconfirm --needed {{ .packages.arch | join " " -}}; then
+    echo "Error: paru failed to install packages"
+    exit 1
+else
+    echo "Finished installing all packages"
+    exit 0
+fi
+{{ end -}}
