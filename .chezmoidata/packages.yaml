@@ -57,6 +57,7 @@ packages:
 
     # Dev
     - git
+    - github-cli
     - neovim
     - cursor-bin
     - direnv
