@@ -26,6 +26,9 @@ packages:
     - sbctl
     - solaar
     - timeshift
+    - cliphist
+    - wlsunset
+    - swayidle
 
     # ui
     - brightnessctl
@@ -50,6 +53,7 @@ packages:
     - tmux
     - btop
     - ffmpeg
+    - cava
 
     # Dev
     - git
