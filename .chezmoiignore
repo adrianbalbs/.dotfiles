@@ -2,11 +2,11 @@ README.md
 
 # Dotfiles for things like wayland compositors and stuff shouldn't be added on other setups
 
-{{- if eq .chezmoi.hostname "adrianb.work"}}
+{{- if eq .chezmoi.osRelease.id "fedora" }}
 */ghostty/
 {{- end }}
 
-{{- if ne .chezmoi.hostname "adrianb" }}
+{{- if ne .chezmoi.osRelease.id "endeavouros" }}
 */hypr/
 */niri/
 */noctalia/
