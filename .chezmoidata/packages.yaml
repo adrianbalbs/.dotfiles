@@ -1,6 +1,6 @@
 packages:
   # this is for work
-  wsl:
+  fedora:
     - git
     - ripgrep
     - nvim
@@ -13,10 +13,10 @@ packages:
     - zoxide
     - tmux
     - timew
-    - starship
     - fd
     - jq
 
+  # personal system
   arch:
     # system
     - polkit-gnome

@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.osRelease.id "fedora" -}}
+#!/bin/bash
+
+echo "Installing packages..."
+
+if ! sudo dnf install -y {{ .packages.fedora | join " " -}}; then
+    echo "Error: dnf failed to install packages"
+    exit 1
+else
+    echo "Finished installing all packages"
+    exit 0
+fi
+{{ end -}}
