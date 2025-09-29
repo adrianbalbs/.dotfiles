@@ -110,7 +110,8 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "predefinedScheme": "Tokyo Night",
+        "matugenSchemeType": "scheme-fruit-salad",
+        "predefinedScheme": "Everforest",
         "useWallpaperColors": false
     },
     "dock": {
@@ -124,6 +125,7 @@
         ]
     },
     "general": {
+        "animationDisabled": false,
         "animationSpeed": 1,
         "avatarImage": "/home/adrianb/Pictures/Swing Your Sword 3 Million Times With Skirk Wallpaper.png",
         "dimDesktop": true,
@@ -157,14 +159,13 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
-        "forced": false,
+        "forced": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
@@ -173,7 +174,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1758971511000,
+        "lastSeenTs": 1759055232000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
