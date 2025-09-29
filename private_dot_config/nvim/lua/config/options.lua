@@ -21,9 +21,8 @@ vim.opt.fillchars = { eob = " " }
 vim.opt.wrap = false
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+vim.go.laststatus = 3
 
 -- For showing hidden characters
 vim.opt.list = true
 
--- enable colorscheme
-vim.cmd "colorscheme everforest"

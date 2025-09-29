@@ -7,14 +7,14 @@ return {
             theme = "auto",
             component_separators = { left = "", right = "" },
             section_separators = { left = "", right = "" },
+            globalstatus = vim.o.laststatus == 3,
             disabled_filetypes = {
-                statusline = {},
+                statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" },
                 winbar = {},
             },
             ignore_focus = {},
             always_divide_middle = true,
             always_show_tabline = true,
-            globalstatus = false,
             refresh = {
                 statusline = 1000,
                 tabline = 1000,
