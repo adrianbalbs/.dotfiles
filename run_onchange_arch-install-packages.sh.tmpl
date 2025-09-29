@@ -21,8 +21,8 @@ echo "Installing packages..."
 if ! paru -S --noconfirm --needed {{ .packages.arch | join " " -}}; then
     echo "Error: paru failed to install packages"
     exit 1
-else
-    echo "Finished installing all packages"
-    exit 0
 fi
+
+echo "Finished installing all packages"
+exit 0
 {{ end -}}

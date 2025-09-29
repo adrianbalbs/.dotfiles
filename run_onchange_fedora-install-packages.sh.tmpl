@@ -1,13 +1,23 @@
 {{ if eq .chezmoi.osRelease.id "fedora" -}}
 #!/bin/bash
 
+# Fedora does not have Starship in its package manager
+if ! command starship &>/dev/null; then
+    echo "Starship not installed"
+
+    if ! curl -sS https://starship.rs/install.sh | sh -s -- -y; then
+        echo "Error: starsip install failed"
+        exit 1
+    fi
+fi
+
 echo "Installing packages..."
 
 if ! sudo dnf install -y {{ .packages.fedora | join " " -}}; then
     echo "Error: dnf failed to install packages"
     exit 1
-else
-    echo "Finished installing all packages"
-    exit 0
 fi
+
+echo "Finished installing all packages"
+exit 0
 {{ end -}}
