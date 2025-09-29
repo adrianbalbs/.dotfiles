@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Fedora does not have Starship in its package manager
-if ! command starship &>/dev/null; then
+if ! command -v starship &>/dev/null; then
     echo "Starship not installed"
 
     if ! curl -sS https://starship.rs/install.sh | sh -s -- -y; then

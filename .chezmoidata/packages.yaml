@@ -5,7 +5,6 @@ packages:
     - ripgrep
     - nvim
     - bat
-    - eza
     - direnv
     - fish
     - fzf
