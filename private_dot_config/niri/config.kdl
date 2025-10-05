@@ -367,6 +367,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"com\.mitchellh\.ghostty$"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"^discord$"#
     open-maximized true
 }
