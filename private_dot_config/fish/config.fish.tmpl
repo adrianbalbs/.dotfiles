@@ -1,13 +1,6 @@
 set fish_greeting
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    set -x VOLTA_HOME "$HOME/.volta"
-    fish_add_path "$VOLTA_HOME/bin"
-
-    set GOPATH "$HOME/go"
-    fish_add_path "$GOPATH/bin"
-
     {{ if eq .chezmoi.os "darwin" -}}
     fish_add_path "/opt/homebrew/bin/"
     {{- end }}
@@ -16,4 +9,5 @@ if status is-interactive
     zoxide init --cmd cd fish | source
     direnv hook fish | source
     starship init fish | source
+    mise activate fish | source
 end
