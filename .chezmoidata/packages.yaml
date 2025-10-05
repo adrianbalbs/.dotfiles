@@ -14,6 +14,7 @@ packages:
     - timew
     - fd
     - jq
+    - mise
 
   # personal system
   arch:
@@ -63,6 +64,8 @@ packages:
     - docker
     - lazygit
     - lazydocker
+    - mise
+    - usage
 
     # TODO language tools?
 
@@ -103,6 +106,7 @@ packages:
       - "starship"
       - "fd"
       - "jq"
+      - "mise"
     casks:
       - "font-fira-code-nerd-font"
       - "ghostty"
