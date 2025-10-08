@@ -14,8 +14,11 @@ packages:
       - timew
       - fd
       - jq
+
+      # copr repos
       - mise
       - lazygit
+      - lazydocker
     copr:
       - jdxcode/mise
       - dejan/lazygit
