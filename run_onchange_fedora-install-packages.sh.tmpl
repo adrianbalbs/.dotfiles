@@ -11,20 +11,20 @@ if ! command -v starship &>/dev/null; then
     fi
 fi
 
-# Add COPR for mise if not already enabled
-if ! sudo dnf repolist | grep -q "jdxcode/mise"; then
-    echo "Enabling COPR repository for mise..."
-    if ! sudo dnf -y copr enable jdxcode/mise; then
-        echo "Error: failed to enable COPR for mise"
-        exit 1
-    fi
+echo " Enabling COPR repositories"
+
+{{ range .packages.fedora.copr -}}
+if sudo dnf copr list | grep -q "{{ . }}"; then
+    echo "COPR already enabled: {{ . }}"
 else
-    echo "COPR repository for mise already enabled"
+    echo "Enabling COPR: {{ . }}"
+    sudo dnf copr enable -y {{ . }}
 fi
+{{ end -}}
 
 echo "Installing packages..."
 
-if ! sudo dnf install -y {{ .packages.fedora | join " " -}}; then
+if ! sudo dnf install -y {{ .packages.fedora.dnf | join " " -}}; then
     echo "Error: dnf failed to install packages"
     exit 1
 fi

@@ -1,20 +1,25 @@
 packages:
   # this is for work
   fedora:
-    - git
-    - ripgrep
-    - nvim
-    - bat
-    - direnv
-    - fish
-    - fzf
-    - lazygit
-    - zoxide
-    - tmux
-    - timew
-    - fd
-    - jq
-    - mise
+    dnf:
+      - git
+      - ripgrep
+      - nvim
+      - bat
+      - direnv
+      - fish
+      - fzf
+      - zoxide
+      - tmux
+      - timew
+      - fd
+      - jq
+      - mise
+      - lazygit
+    copr:
+      - jdxcode/mise
+      - dejan/lazygit
+      - atim/lazydocker
 
   # personal system
   arch:
