@@ -98,25 +98,25 @@ packages:
   darwin:
     # bit of repetition here but thats fine
     brews:
-      - "git"
-      - "ripgrep"
-      - "nvim"
-      - "bat"
-      - "coreutils"
-      - "eza"
-      - "direnv"
-      - "fish"
-      - "fzf"
-      - "lazygit"
-      - "zoxide"
-      - "tmux"
-      - "timewarrior"
-      - "starship"
-      - "fd"
-      - "jq"
-      - "mise"
+      - git
+      - ripgrep
+      - nvim
+      - bat
+      - coreutils
+      - eza
+      - direnv
+      - fish
+      - fzf
+      - lazygit
+      - zoxide
+      - tmux
+      - timewarrior
+      - starship
+      - fd
+      - jq
+      - mise
     casks:
-      - "font-fira-code-nerd-font"
-      - "ghostty"
-      - "github"
-      - "docker-desktop"
+      - font-fira-code-nerd-font
+      - ghostty
+      - github
+      - docker-desktop
