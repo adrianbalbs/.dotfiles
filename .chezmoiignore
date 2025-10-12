@@ -2,7 +2,7 @@ README.md
 
 # Dotfiles for things like wayland compositors and stuff shouldn't be added on other setups
 
-{{- if eq .chezmoi.hostname "fedora" }}
+{{- if eq .chezmoi.hostname "work" }}
 */ghostty/
 {{- end }}
 
