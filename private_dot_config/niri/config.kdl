@@ -367,7 +367,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"com\.mitchellh\.ghostty$"#
+    match app-id=r#"^com\.mitchellh\.ghostty$"#
     open-maximized true
 }
 

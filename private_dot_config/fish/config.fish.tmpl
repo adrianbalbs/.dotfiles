@@ -1,13 +1,12 @@
 set fish_greeting
+status is-interactive; or exit
 
-if status is-interactive
-    {{ if eq .chezmoi.os "darwin" -}}
-    fish_add_path "/opt/homebrew/bin/"
-    {{- end }}
+{{- if eq .chezmoi.os "darwin" -}}
+fish_add_path "/opt/homebrew/bin/"
+{{- end }}
 
-    fzf --fish | source
-    zoxide init --cmd cd fish | source
-    direnv hook fish | source
-    starship init fish | source
-    mise activate fish | source
-end
+fzf --fish | source
+zoxide init --cmd cd fish | source
+direnv hook fish | source
+starship init fish | source
+mise activate fish | source
