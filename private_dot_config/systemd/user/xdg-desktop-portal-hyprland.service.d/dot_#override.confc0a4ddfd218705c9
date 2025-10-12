@@ -1,0 +1,21 @@
+### Editing /home/adrianb/.config/systemd/user/xdg-desktop-portal-hyprland.service.d/override.conf
+### Anything between here and the comment below will become the contents of the drop-in file
+
+
+
+### Edits below this comment will be discarded
+
+
+### /usr/lib/systemd/user/xdg-desktop-portal-hyprland.service
+# [Unit]
+# Description=Portal service (Hyprland implementation)
+# PartOf=graphical-session.target
+# After=graphical-session.target
+# ConditionEnvironment=WAYLAND_DISPLAY
+# 
+# [Service]
+# Type=dbus
+# BusName=org.freedesktop.impl.portal.desktop.hyprland
+# ExecStart=/usr/lib/xdg-desktop-portal-hyprland
+# Restart=on-failure
+# Slice=session.slice

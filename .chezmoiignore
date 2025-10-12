@@ -11,5 +11,6 @@ README.md
 */niri/
 */noctalia/
 */wezterm/
+*/systemd/
 {{- end }}
 
