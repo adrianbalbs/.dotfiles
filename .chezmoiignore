@@ -6,7 +6,7 @@ README.md
 */ghostty/
 {{- end }}
 
-{{- if ne .chezmoi.hostname "endeavouros" }}
+{{- if ne .chezmoi.hostname "cachyos" }}
 */hypr/
 */niri/
 */noctalia/

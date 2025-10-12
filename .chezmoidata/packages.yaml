@@ -33,7 +33,6 @@ packages:
     - bluez
     - sbctl
     - solaar
-    - timeshift
     - cliphist
     - wlsunset
     - swayidle
@@ -74,6 +73,8 @@ packages:
     - lazydocker
     - mise
     - usage
+    - tree-sitter
+    - tree-sitter-cli
 
     # TODO language tools?
 
