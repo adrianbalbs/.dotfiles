@@ -40,7 +40,7 @@ packages:
 
     # ui
     - brightnessctl
-    - quickshell
+    - quickshell-git
 
     # niri
     - niri
