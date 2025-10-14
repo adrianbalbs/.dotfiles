@@ -16,7 +16,7 @@ end
 -- For example, changing the color scheme:
 -- config.colors = theme.colors()
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
-config.color_scheme = "Everforest Dark (Medium)"
+config.color_scheme = "Everforest Dark Medium (Gogh)"
 config.default_prog = { "/usr/bin/fish", "-l" }
 config.send_composed_key_when_left_alt_is_pressed = false
 config.send_composed_key_when_right_alt_is_pressed = true
