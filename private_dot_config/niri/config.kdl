@@ -118,7 +118,7 @@ output "DP-1" {
 
 output "DP-2" {
     mode "2560x1440@239.998"
-    position x=1440 y=700
+    position x=1440 y=650
     focus-at-startup
     variable-refresh-rate
 }
