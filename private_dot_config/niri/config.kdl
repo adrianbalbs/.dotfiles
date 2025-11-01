@@ -111,16 +111,16 @@ input {
 //}
 
 output "DP-1" {
-    mode "2560x1440@165.080"
-    transform "90"
-    position x=0 y=0
-}
-
-output "DP-2" {
     mode "2560x1440@239.998"
     position x=1440 y=650
     focus-at-startup
     variable-refresh-rate
+}
+
+output "DP-2" {
+    mode "2560x1440@165.080"
+    position x=0 y=0
+    transform "90"
 }
 
 
@@ -465,7 +465,7 @@ binds {
     Mod+B hotkey-overlay-title="Open a Browser: Zen" { spawn "zen-browser"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn "discord"; }
     Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
 
     Mod+Shift+W hotkey-overlay-title="Wallpaper Selector" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
