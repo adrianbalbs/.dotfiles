@@ -43,7 +43,7 @@ packages:
 
     # niri
     - niri
-    - noctalia-shell
+    - dms-shell-git
 
     # cli tools
     - ripgrep
