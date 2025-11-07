@@ -6,6 +6,18 @@
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
+
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+// spawn-at-startup "dms" "run"
+
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  QT_QPA_PLATFORM "wayland"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
+
 input {
     keyboard {
 
@@ -411,7 +423,7 @@ window-rule {
 }
 
 layer-rule {
-    match namespace="^quickshell-overview$"
+    match namespace="^quickshell$"
     place-within-backdrop true
 }
 
@@ -464,13 +476,29 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Open a Browser: Zen" { spawn "zen-browser"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn "discord"; }
-    Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
+    Mod+Space hotkey-overlay-title="Application Launcher" {
+        spawn "dms" "ipc" "call" "spotlight" "toggle";
+    }
+    Mod+Shift+C hotkey-overlay-title="Clipboard Manager" {
+        spawn "dms" "ipc" "call" "clipboard" "toggle";
+    }
+    Mod+M hotkey-overlay-title="Task Manager" {
+        spawn "dms" "ipc" "call" "processlist" "toggle";
+    }
+    Mod+Comma hotkey-overlay-title="Settings" {
+        spawn "dms" "ipc" "call" "settings" "toggle";
+    }
+    Mod+N hotkey-overlay-title="Notification Center" {
+        spawn "dms" "ipc" "call" "notifications" "toggle";
+    }
+    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
+        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+    }
 
-    Mod+Shift+W hotkey-overlay-title="Wallpaper Selector" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
-    Mod+Shift+C hotkey-overlay-title="Clipboard History" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
-
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" {
+        spawn "dms" "ipc" "call" "lock" "lock";
+    }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -644,7 +672,7 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
+    // Mod+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
     Mod+Period { expel-window-from-column; }
 
@@ -718,4 +746,6 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
 }
+
