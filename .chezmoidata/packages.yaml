@@ -43,7 +43,7 @@ packages:
 
     # niri
     - niri
-    - dms-shell-git
+    - dms-shell-bin
 
     # cli tools
     - ripgrep
