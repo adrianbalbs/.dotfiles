@@ -365,6 +365,13 @@ window-rule {
     default-column-width {}
 }
 
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
@@ -432,6 +439,24 @@ layer-rule {
 layer-rule {
     match namespace="^quickshell-wallpaper$"
     place-within-backdrop true
+}
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
 }
 
 
