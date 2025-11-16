@@ -66,7 +66,6 @@ packages:
     - git
     - github-cli
     - neovim
-    - cursor-bin
     - direnv
     - docker
     - lazygit
@@ -82,7 +81,6 @@ packages:
     - zen-browser-bin
     - brave-bin
     - ghostty
-    - wezterm-git
     - discord
     - obsidian
     - thunderbird
