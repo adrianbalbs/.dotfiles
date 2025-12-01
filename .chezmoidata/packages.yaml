@@ -27,8 +27,6 @@ packages:
   # personal system
   arch:
     # system
-    - polkit-gnome
-    - xdg-desktop-portal-gnome
     - cups
     - bluez
     - sbctl
