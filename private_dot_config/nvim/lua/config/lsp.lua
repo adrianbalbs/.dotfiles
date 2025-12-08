@@ -70,4 +70,5 @@ vim.lsp.enable {
     "marskman",
     "yamlls",
     "fish_lsp",
+    "expert"
 }
