@@ -15,6 +15,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("n", "gi", vim.lsp.buf.implementation, "Go to implementation")
         map("n", "go", vim.lsp.buf.type_definition, "Go to type definition")
         map("n", "gs", vim.lsp.buf.signature_help, "Show signature help")
+        map("n", "ge", vim.diagnostic.open_float, "Show code actions")
 
         -- References and Actions
         map("n", "gr", vim.lsp.buf.references, "Find references")
