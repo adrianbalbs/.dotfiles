@@ -1,4 +1,5 @@
 [tools]
+erlang = "latest"
 go = "latest"
 java = "openjdk-25"
 node = "latest"
@@ -7,3 +8,4 @@ python = "latest"
 rust = "latest"
 usage = "latest"
 uv = "latest"
+elixir = "latest"
