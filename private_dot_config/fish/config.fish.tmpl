@@ -11,6 +11,16 @@ direnv hook fish | source
 starship init fish | source
 mise activate fish | source
 
-{{ if eq .chezmoi.hostname "endeavouros" -}}
-fish_add_path ~/.config/emacs/bin
+{{- if eq .chezmoi.os "darwin" -}}
+fish_add_path "/opt/homebrew/bin/"
 {{- end }}
+
+{{ if eq .chezmoi.hostname "work" -}}
+export PATH="$HOME/.local/bin:$PATH"
+set -gx EDITOR nvim
+
+# opencode
+fish_add_path /home/adrianb/.opencode/bin
+{{- end }}
+
+
