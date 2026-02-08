@@ -1,7 +1,8 @@
 [tools]
 erlang = "latest"
 go = "latest"
-java = "openjdk-25"
+java = "21"
+maven = "latest"
 node = "latest"
 pnpm = "latest"
 python = "latest"
