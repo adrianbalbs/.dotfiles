@@ -59,5 +59,6 @@ vim.lsp.enable {
     "yamlls",
     "fish_lsp",
     "expert",
-    "tailwindcss"
+    "tailwindcss",
+    "bashls"
 }
