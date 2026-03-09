@@ -2,6 +2,10 @@
 	email = {{ .email | quote }}
 	name = Adrian Balbalosa
 [init]
+{{- if eq .chezmoi.hostname "work" }}
+	defaultBranch = master
+{{ else }}
 	defaultBranch = main
+{{ end -}}
 [core]
 	editor = vim
