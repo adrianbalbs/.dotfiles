@@ -50,7 +50,7 @@ vim.lsp.enable {
     "eslint",
     "gopls",
     "cmake",
-    "basedpyright",
+    "ty",
     "jsonls",
     "bashls",
     "ruff",
