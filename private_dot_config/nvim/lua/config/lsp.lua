@@ -60,5 +60,6 @@ vim.lsp.enable {
     "fish_lsp",
     "expert",
     "tailwindcss",
-    "bashls"
+    "bashls",
+    "ansiblels"
 }

@@ -7,6 +7,7 @@ return {
             lint.linters_by_ft = {
                 sh = { "shellcheck" },
                 python = { "ruff" },
+                ["yaml.ansible"] = { "ansible_lint" },
             }
 
             -- To allow other plugins to add linters to require('lint').linters_by_ft,
