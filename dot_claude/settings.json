@@ -1,0 +1,6 @@
+{
+  "effortLevel": "medium",
+  "skipDangerousModePermissionPrompt": true,
+  "fileCheckpointingEnabled": false,
+  "model": "opus"
+}
