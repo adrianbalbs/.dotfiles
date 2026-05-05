@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "plugins": {
+    "astral@astral-sh": [
+      {
+        "scope": "user",
+        "installPath": "/home/adrianb/.claude/plugins/cache/astral-sh/astral/0.1.0",
+        "version": "0.1.0",
+        "installedAt": "2026-05-05T01:42:43.783Z",
+        "lastUpdated": "2026-05-05T01:42:43.783Z",
+        "gitCommitSha": "f3ce88a7ba830f53afd6d944c1d0278ed318e142"
+      }
+    ],
+    "jdtls-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/adrianb/.claude/plugins/cache/claude-plugins-official/jdtls-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-05T02:05:38.965Z",
+        "lastUpdated": "2026-05-05T02:05:38.965Z"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/adrianb/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-05T02:05:56.093Z",
+        "lastUpdated": "2026-05-05T02:05:56.093Z"
+      }
+    ]
+  }
+}

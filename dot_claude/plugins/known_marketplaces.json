@@ -1,0 +1,18 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/home/adrianb/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-05-05T02:05:26.177Z"
+  },
+  "astral-sh": {
+    "source": {
+      "source": "github",
+      "repo": "astral-sh/claude-code-plugins"
+    },
+    "installLocation": "/home/adrianb/.claude/plugins/marketplaces/astral-sh",
+    "lastUpdated": "2026-05-05T01:41:24.832Z"
+  }
+}

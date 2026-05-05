@@ -1,6 +1,18 @@
 {
+  "enabledPlugins": {
+    "astral@astral-sh": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "astral-sh": {
+      "source": {
+        "source": "github",
+        "repo": "astral-sh/claude-code-plugins"
+      }
+    }
+  },
   "effortLevel": "medium",
   "skipDangerousModePermissionPrompt": true,
-  "fileCheckpointingEnabled": false,
-  "model": "opus"
+  "fileCheckpointingEnabled": false
 }

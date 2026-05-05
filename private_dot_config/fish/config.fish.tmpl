@@ -18,6 +18,7 @@ fish_add_path "/opt/homebrew/bin/"
 {{ if eq .chezmoi.hostname "work" -}}
 export PATH="$HOME/.local/bin:$PATH"
 set -gx EDITOR nvim
+fish_add_path "/home/adrianb/.local/share/nvim/mason/bin"
 
 # opencode
 fish_add_path /home/adrianb/.opencode/bin
