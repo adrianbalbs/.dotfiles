@@ -61,5 +61,6 @@ vim.lsp.enable {
     "expert",
     "tailwindcss",
     "bashls",
-    "ansiblels"
+    "ansiblels",
+    "biome"
 }
