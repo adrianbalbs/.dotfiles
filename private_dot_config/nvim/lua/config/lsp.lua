@@ -39,7 +39,7 @@ vim.lsp.config("*", {
     root_markers = { ".git" },
 })
 
-vim.diagnostic.config { virtual_lines = true }
+vim.diagnostic.config { virtual_lines = false, virtual_text = true }
 
 vim.lsp.enable {
     "cssls",
