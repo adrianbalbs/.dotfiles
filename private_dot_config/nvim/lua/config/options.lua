@@ -25,4 +25,4 @@ vim.go.laststatus = 3
 
 -- For showing hidden characters
 vim.opt.list = true
-
+vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" }
