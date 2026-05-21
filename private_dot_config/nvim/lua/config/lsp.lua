@@ -39,6 +39,21 @@ vim.lsp.config("*", {
     root_markers = { ".git" },
 })
 
+vim.lsp.config("css_variables", {
+    settings = {
+        cssVariables = {
+            lookupFiles = {
+                "**/*.less",
+                "**/*.scss",
+                "**/*.sass",
+                "**/*.css",
+                -- If mantine is installed, this will allow autocomplete
+                "node_modules/@mantine/core/styles.css",
+            },
+        },
+    },
+})
+
 vim.diagnostic.config { virtual_lines = false, virtual_text = true }
 
 vim.lsp.enable {
@@ -62,5 +77,6 @@ vim.lsp.enable {
     "tailwindcss",
     "bashls",
     "ansiblels",
-    "biome"
+    "biome",
+    "css_variables"
 }
