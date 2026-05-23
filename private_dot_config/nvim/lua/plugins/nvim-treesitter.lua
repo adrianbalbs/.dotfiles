@@ -4,39 +4,12 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
     },
+    branch = "main",
     config = function()
-        local configs = require "nvim-treesitter.configs"
+        local configs = require "nvim-treesitter"
 
         ---@diagnostic disable-next-line: missing-fields
         configs.setup {
-            ensure_installed = {
-                "c",
-                "lua",
-                "vim",
-                "vimdoc",
-                "query",
-                "javascript",
-                "tsx",
-                "html",
-                "rust",
-                "go",
-                "cpp",
-                "css",
-                "bash",
-                "json",
-                "latex",
-                "sql",
-                "svelte",
-                "typescript",
-                "git_config",
-                "gitcommit",
-                "git_rebase",
-                "gitignore",
-                "gitattributes",
-                "astro",
-                "ocaml",
-                "zig"
-            },
             auto_install = true,
             sync_install = false,
             ignore_install = {},
