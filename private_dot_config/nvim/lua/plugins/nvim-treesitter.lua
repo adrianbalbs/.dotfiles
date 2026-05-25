@@ -58,7 +58,7 @@ return {
         })
 
         local ensureInstalled = {
-            "python", "typescript", "javascript", "rust", "lua"
+            "python", "typescript", "javascript", "rust", "lua", "tsx", "go"
         }
 
         local alreadyInstalled = require('nvim-treesitter.config').get_installed()
