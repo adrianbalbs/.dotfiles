@@ -5,18 +5,20 @@ status is-interactive; or exit
 fish_add_path "/opt/homebrew/bin/"
 {{- end }}
 
-fzf --fish | source
-zoxide init --cmd cd fish | source
-direnv hook fish | source
-starship init fish | source
-mise activate fish | source
+export PATH="$HOME/.local/bin:$PATH"
+
+command -q fzf;      and fzf --fish | source
+command -q zoxide;   and zoxide init --cmd cd fish | source
+command -q direnv;   and direnv hook fish | source
+command -q starship; and starship init fish | source
+command -q mise;     and mise activate fish | source
 
 {{ if eq .chezmoi.os "darwin" -}}
 fish_add_path "/opt/homebrew/bin/"
 {{- end }}
 
 {{ if eq .chezmoi.hostname "work" -}}
-export PATH="$HOME/.local/bin:$PATH"
+
 set -gx EDITOR nvim
 fish_add_path "/home/adrianb/.local/share/nvim/mason/bin"
 
