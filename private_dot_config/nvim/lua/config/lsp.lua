@@ -54,6 +54,21 @@ vim.lsp.config("css_variables", {
     },
 })
 
+vim.lsp.config("vtsls", {
+    settings = {
+        typescript = {
+            preferences = {
+                importModuleSpecifier = "non-relative"
+            }
+        },
+        javascript = {
+            preferences = {
+                importModuleSpecifier = "non-relative"
+            }
+        }
+    }
+})
+
 vim.diagnostic.config { virtual_lines = false, virtual_text = true }
 
 vim.lsp.enable {
