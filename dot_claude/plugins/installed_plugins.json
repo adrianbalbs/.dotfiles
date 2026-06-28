@@ -28,6 +28,16 @@
         "installedAt": "2026-05-05T02:05:56.093Z",
         "lastUpdated": "2026-05-05T02:05:56.093Z"
       }
+    ],
+    "neo4j-skills@neo4j-skills-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "/home/adrianb/.claude/plugins/cache/neo4j-skills-marketplace/neo4j-skills/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-18T23:08:30.065Z",
+        "lastUpdated": "2026-05-18T23:08:30.065Z",
+        "gitCommitSha": "88e37b89e55e032badd12815bafd46239d8d42d0"
+      }
     ]
   }
 }

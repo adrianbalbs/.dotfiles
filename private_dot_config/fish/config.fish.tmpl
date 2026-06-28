@@ -13,17 +13,24 @@ command -q direnv;   and direnv hook fish | source
 command -q starship; and starship init fish | source
 command -q mise;     and mise activate fish | source
 
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if eq .chezmoi.os "darwin" -}}
 fish_add_path "/opt/homebrew/bin/"
 {{- end }}
 
 {{ if eq .chezmoi.hostname "work" -}}
 
 set -gx EDITOR nvim
+
+# make nvim lsps executable
 fish_add_path "/home/adrianb/.local/share/nvim/mason/bin"
 
 # opencode
 fish_add_path /home/adrianb/.opencode/bin
 {{- end }}
 
-
+# pnpm
+set -gx PNPM_HOME "/home/adrianb/.local/share/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+# pnpm end

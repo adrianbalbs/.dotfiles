@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/home/adrianb/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-05-08T04:11:06.561Z"
+    "lastUpdated": "2026-06-26T00:03:12.637Z"
   },
   "astral-sh": {
     "source": {
@@ -14,5 +14,13 @@
     },
     "installLocation": "/home/adrianb/.claude/plugins/marketplaces/astral-sh",
     "lastUpdated": "2026-05-05T01:41:24.832Z"
+  },
+  "neo4j-skills-marketplace": {
+    "source": {
+      "source": "git",
+      "url": "https://github.com/neo4j-contrib/neo4j-skills.git"
+    },
+    "installLocation": "/home/adrianb/.claude/plugins/marketplaces/neo4j-skills-marketplace",
+    "lastUpdated": "2026-05-18T23:08:19.704Z"
   }
 }
