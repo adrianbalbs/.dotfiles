@@ -57,6 +57,7 @@ vim.lsp.config("css_variables", {
 vim.lsp.config("vtsls", {
     settings = {
         typescript = {
+            tsdk = "node_modules/typescript/lib",
             preferences = {
                 importModuleSpecifier = "non-relative"
             }
@@ -65,6 +66,9 @@ vim.lsp.config("vtsls", {
             preferences = {
                 importModuleSpecifier = "non-relative"
             }
+        },
+        vtsls = {
+            autoUseWorkspaceTsdk = true
         }
     }
 })
