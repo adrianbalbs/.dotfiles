@@ -1,5 +1,4 @@
 {
-  "model": "opus",
   "enabledPlugins": {
     "astral@astral-sh": true,
     "jdtls-lsp@claude-plugins-official": true,
@@ -23,5 +22,6 @@
   "effortLevel": "medium",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "fileCheckpointingEnabled": false
+  "fileCheckpointingEnabled": false,
+  "model": "opus"
 }
