@@ -13,7 +13,7 @@ command -q direnv;   and direnv hook fish | source
 command -q starship; and starship init fish | source
 command -q mise;     and mise activate fish | source
 
-{{- if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" -}}
 fish_add_path "/opt/homebrew/bin/"
 {{- end }}
 
